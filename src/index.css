@@ -1,0 +1,937 @@
+.main-header {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+  padding: 12px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.top-left span {
+  margin-right: 20px;
+}
+
+.top-right a {
+  color: #fff;
+  margin-left: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.top-right a:hover {
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+}
+
+/* ===== Main Navbar ===== */
+.custom-navbar {
+  margin-top: 10px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.3) inset;
+}
+
+.icn {
+  font-size: 18px;
+}
+
+.logo img {
+  width: 140px;
+}
+
+.nav-links .nav-link {
+  color: #fff !important;
+  margin: 0 18px;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links .nav-link:hover {
+  color: #9b51e0 !important;
+}
+
+.form-title {
+  color: #9b51e0 !important;
+  text-align: center;
+
+}
+
+.support-btn {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+  color: #fff;
+  font-weight: 500;
+}
+
+.support-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Mobile Fix ===== */
+@media (max-width: 991px) {
+  .custom-navbar {
+    border-radius: 20px;
+  }
+
+  .nav-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .support-btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+.hero-slider {
+  position: relative;
+  min-height: 100vh;
+}
+
+.slide {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+/* Background images */
+
+
+/* Purple overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #33266AE6 30%, #33266A33 70%);
+
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 200px;
+}
+
+/* Left text */
+.hero-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero-left span {
+  color: #d0a8ff;
+}
+
+/* Glass form */
+.hero-form-card {
+  /* background: rgba(255, 255, 255, 0.15); */
+  backdrop-filter: blur(20px);
+  padding: 35px;
+  border-radius: 20px;
+  background-color: transparent;
+  background-image: linear-gradient(160deg, #FFFFFFBF 50%, #33266A99 100%);
+}
+
+.hero-form-card .form-control {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.submit-btn {
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+  border: none;
+}
+
+/* Swiper pagination style */
+.swiper-pagination-bullet {
+  background: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #9b51e0;
+}
+
+
+@media (max-width: 991px) {
+
+  .hero-slider,
+  .slide {
+    height: 100vh;
+    /* keep full height */
+    padding: 0;
+    /* remove extra padding */
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .hero-content {
+    margin-top: 120px;
+    /* adjust spacing manually */
+    padding-bottom: 40px;
+  }
+
+  .slide::before {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Zoom animation */
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.slide {
+  overflow: hidden;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  animation: zoomEffect 6s ease-in-out infinite alternate;
+}
+
+.slide-1::before {
+  background: url("./assets/asian-helpdesk-representative-in-headphones-with-his-colleagues-providing-tech-support-services-to-1024x682.jpg") center/cover no-repeat;
+}
+
+.slide-2::before {
+  background: url("./assets//happy-and-smiling-worker-with-headset-for-video-call-asian-tech-support-man-talking-to-online-1024x682.jpg") center/cover no-repeat;
+}
+
+.about-section {
+  padding: 120px 0;
+  background-image: radial-gradient(at top left, #FCE0FC 0%, #FFFFFF 30%);
+}
+
+/* Image */
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+/* Floating Glass Card */
+.floating-card {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background-image: radial-gradient(at top center, #FCE0FC 0%, #ffffff 40%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+
+  box-shadow: 0px -7px 25px 0px rgba(250, 196, 250, 0.5) inset;
+}
+
+
+
+.icon-circle {
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #980000;
+}
+
+/* Content */
+.badge-title {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(155, 81, 224, 0.1);
+  border-radius: 30px;
+  color: #9b51e0;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.about-content h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.about-content {
+  background-image: radial-gradient(at center center, #FCE0FC 0%, #D6282800 63%);
+}
+
+.about-content h2 span {
+  background: linear-gradient(90deg, #c084fc, #7f5af0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-desc {
+  margin: 20px 0;
+  color: #666;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.about-list li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.about-list svg {
+  color: #9b51e0;
+}
+
+.about-btn {
+  border-radius: 30px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+  border: none;
+  color: #fff;
+}
+
+.stats-section {
+  margin-top: -80px;
+  /* Overlap previous section */
+  background-image: radial-gradient(at bottom right, #FCE0FC 0%, #D6282800 25%);
+  padding-bottom: 100px;
+}
+
+.stats-box {
+  background: linear-gradient(135deg, #3f2b96, #7f5af0);
+  border-radius: 40px;
+  padding: 70px 40px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Subtle grid pattern overlay */
+.stats-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+.stat-item {
+  position: relative;
+  z-index: 2;
+}
+
+.stat-item h2 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.stat-item p {
+  margin-top: 15px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .stats-box {
+    padding: 50px 20px;
+  }
+
+  .stat-item {
+    margin-bottom: 40px;
+  }
+
+  .stat-item h2 {
+    font-size: 38px;
+  }
+}
+
+/* SECTION */
+.services-section {
+  padding: 50px 0px;
+
+  background: radial-gradient(at top right, #FCE0FC 0%, #FFFFFF 30%);
+  text-align: center;
+}
+
+/* Badge */
+.section-badge {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 30px;
+  background: rgba(127, 90, 240, 0.1);
+  color: #7f5af0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Heading */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title span {
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARD */
+.service-card {
+  padding: 50px 35px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(127, 90, 240, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon circle */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7f5af0, #9b51e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.service-card h4 {
+  margin-top: 25px;
+  font-weight: 600;
+  transition: color 0.4s ease;
+}
+
+.service-card p {
+  margin: 20px 0;
+  color: #666;
+  transition: color 0.4s ease;
+}
+
+.learn-more {
+  font-weight: 600;
+  color: #7f5af0;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/* ===================== */
+/* HOVER EFFECT */
+/* ===================== */
+
+.service-card:hover {
+  background: linear-gradient(135deg, #3f2b96, #7f5af0);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(127, 90, 240, 0.25);
+}
+
+/* Text turns white */
+.service-card:hover h4,
+.service-card:hover p,
+.service-card:hover .learn-more {
+  color: #ffffff;
+}
+
+/* Icon invert */
+.service-card:hover .icon-circle {
+  background: #ffffff;
+  color: #7f5af0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+.testimonial-section {
+  position: relative;
+  padding: 120px 0;
+  background: url("./assets/beautiful-woman-wearing-headsets-worker-call-centre-working-customer-support-service-operator--1024x682.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+/* Purple overlay */
+.testimonial-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #d6282800 30%, #33266ae6 70%);
+
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.right-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.right-content span {
+  display: block;
+  background: linear-gradient(135deg, #fff, #d0a8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: linear-gradient(160deg, #33266a 30%, #8066fa 100%);
+  ;
+  padding: 35px;
+  border-radius: 25px;
+  color: #fff;
+  height: 100%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.testimonial-card p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.client-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .right-content {
+    margin-top: 50px;
+  }
+
+  .right-content h2 {
+    font-size: 30px;
+  }
+}
+
+/* ============================= */
+/* ABOUT HERO */
+/* ============================= */
+
+.about-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Background Image */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./assets//working-customer-support-service-operator-communication-in-corporate-business-advisor-concept--1024x576.jpg") center/cover no-repeat;
+  z-index: 0;
+}
+
+
+/* Overlay (reuse your hero overlay) */
+.about-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #33266AE6 30%, #33266A66 70%);
+  z-index: 1;
+}
+
+.about-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.about-hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.about-hero h1 span {
+  color: #d0a8ff;
+}
+
+.about-hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 700px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+  .about-hero {
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+}
+
+/* ============================= */
+/* TEAM SECTION */
+/* ============================= */
+
+.team-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #2f2269, #4b3aa5);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grid Overlay */
+.team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.team-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Badge */
+.team-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.team-section h2 {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.team-section h2 span {
+  background: linear-gradient(90deg, #d9b3ff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.team-desc {
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.team-btn {
+  border-radius: 30px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #d6a8ff, #f3b1d4);
+  border: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Cards */
+.team-card {
+  border-radius: 35px;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.team-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 35px;
+  transition: 0.4s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+  .team-section h2 {
+    font-size: 32px;
+  }
+
+  .team-card img {
+    height: 380px;
+  }
+
+}
+
+.img-small img,
+.img-large img {
+  border-radius: 12px;
+}
+
+.img-large {
+  position: relative;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* TEAM SECTION */
+/* ============================= */
+
+.team-card {
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.team-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 35px;
+  transition: 0.5s ease;
+}
+
+/* Overlay */
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  color: #fff;
+  background: linear-gradient(to top,
+      rgba(220, 190, 212, 0.95) 0%,
+      rgba(79, 54, 167, 0.6) 40%,
+      transparent 80%);
+  transition: 0.4s ease;
+}
+
+.team-overlay h5 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.team-overlay span {
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+/* Social Icons */
+.team-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.3) inset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.team-social a:hover {
+  background: #fff;
+  color: #7f5af0;
+}
+
+/* Hover Animation */
+.team-card:hover img {
+  transform: scale(1.05);
+}
+
+.team-card:hover .team-overlay {
+  background: linear-gradient(to top,
+      rgba(79, 54, 167, 1) 0%,
+      rgba(79, 54, 167, 0.8) 50%,
+      transparent 90%);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .team-card img {
+    height: 380px;
+  }
+}
+
+/* ============================= */
+/* conatct HERO */
+/* ============================= */
+
+.contact-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Background Image */
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./assets//smiling-customer-support-service-operator-with-hands-free-headset-working-in-office-150x150.jpg") center/cover no-repeat;
+  z-index: 0;
+}
+
+
+/* Overlay (reuse your hero overlay) */
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #33266AE6 30%, #33266A66 70%);
+  z-index: 1;
+}
+
+.contact-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.contact-hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.contact-hero h1 span {
+  color: #d0a8ff;
+}
+
+.contact-hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 700px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+  .contact-hero {
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  .contact-hero h1 {
+    font-size: 32px;
+  }
+
+}
