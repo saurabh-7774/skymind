@@ -1,8 +1,20 @@
 import { Container, Row, Col } from "react-bootstrap";
 
+import defaultHero from '../assets/1_3.jpg'
+
 const AboutHero = () => {
+  const background =  defaultHero;
+
   return (
-    <section className="about-hero">
+    <section
+      className="about-hero"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="overlay"></div>
 
       <Container className="hero-content px-2 px-lg-5">

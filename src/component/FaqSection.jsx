@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import faqImg from "../assets/customer-service-man-at-work-1024x682.jpg";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqData = [
     {
@@ -46,11 +49,20 @@ const faqData = [
 ];
 
 const FaqSection = () => {
+
     const [activeIndex, setActiveIndex] = useState(0);
 
     const toggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-in-out"
+        });
+    }, []);
 
     return (
         <section className="faq-section">
@@ -58,27 +70,42 @@ const FaqSection = () => {
                 <Row className="align-items-center">
 
                     {/* LEFT SIDE */}
-                    <Col lg={6}>
-                        <div className="faq-badge">KNOWLEDGE & SUPPORT</div>
+                    <Col lg={6} data-aos="fade-right">
 
-                        <h2 className="faq-title">
+                        <div className="faq-badge" data-aos="fade-up">
+                            KNOWLEDGE & SUPPORT
+                        </div>
+
+                        <h2
+                            className="faq-title"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
                             Everything You Need To Know About
                             <span> AI, Cloud & Career Growth.</span>
                         </h2>
 
-                        <div className="faq-image">
+                        <div
+                            className="faq-image"
+                            data-aos="zoom-in"
+                            data-aos-delay="200"
+                        >
                             <img src={faqImg} alt="FAQ" />
                         </div>
+
                     </Col>
 
                     {/* RIGHT SIDE */}
-                    <Col lg={6}>
+                    <Col lg={6} data-aos="fade-left">
+
                         <div className="faq-accordion rounded-pill">
+
                             {faqData.map((item, index) => (
                                 <div
                                     key={index}
-                                    className={`faq-item ${activeIndex === index ? "active" : ""
-                                        }`}
+                                    className={`faq-item ${activeIndex === index ? "active" : ""}`}
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 120}
                                 >
                                     <div
                                         className="faq-question rounded-pill"
@@ -97,7 +124,9 @@ const FaqSection = () => {
                                     )}
                                 </div>
                             ))}
+
                         </div>
+
                     </Col>
 
                 </Row>

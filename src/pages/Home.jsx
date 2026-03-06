@@ -16,17 +16,19 @@ import React from 'react'
 const Home = () => {
     return (
         <div><HeroSection />
+            <SupportSection />
+            <ToolsSection />
+
             <AboutSection />
             <StatsSection />
-            <ToolsSection />
-            <SupportSection />
+            {/* <SupportSection /> */}
             <TestimonialSection />
 
-            <SupportProcess />
 
-            <BlogSection />
+            {/* <BlogSection /> */}
+            <FaqSection />
             <CtaSection />
-            <FaqSection /></div>
+        </div>
     )
 }
 

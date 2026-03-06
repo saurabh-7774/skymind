@@ -21,12 +21,23 @@ import CourseDetails from './pages/CourseDetails';
 import Contact from "./pages/Contact";
 import MernSection from './pages/MernSection';
 import SubcourseDetails from './pages/SubcourseDetails';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+import ScrollToTop from './ScrollToTop';
+import FloatingContact from './component/FloatingContact';
+import EnquiryPopup from './EnquiryPopup';
 function App() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <Router>
 
         <CustomNavbar />
+        <ScrollToTop />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,11 +46,12 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/courses/:slug" element={<CourseDetails />} />
-          <Route path='/coursedetils/:slug' element={<SubcourseDetails/>}/>
+          <Route path='/coursedetils/:slug' element={<SubcourseDetails />} />
         </Routes>
 
         <Footer />
-
+        <FloatingContact/>
+        <EnquiryPopup/>
       </Router>
 
     </>

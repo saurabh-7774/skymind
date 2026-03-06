@@ -18,19 +18,18 @@ const MissionSection = () => {
                             <span className="mission-badge">
                                 MISSION & VISION
                             </span>
-
                             <h2>
-                                Our Mission Is To Deliver Dependable
-                                <span> Tech Support Services.</span>
+                                Transforming Learners Into
+                                <span> Skilled IT Professionals</span>
                             </h2>
 
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                We create measurable value through innovation,
+                                continuous learning, and a customer-first appro
                             </p>
 
                             {/* Feature Card */}
-                            <Col lg={9}>
+                            <Col lg={11}>
                                 <div className="mission-card">
 
                                     <div className="mission-item">
@@ -38,8 +37,11 @@ const MissionSection = () => {
                                             <FaHandshake />
                                         </div>
                                         <div>
-                                            <h6>Customer Commitment</h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <h6>Our Mission</h6>
+                                            <p>
+                                                To provide high-quality, affordable, and reliable
+                                                IT services that simplify processes and enhance productivity.
+                                            </p>
                                         </div>
                                     </div>
 
@@ -50,8 +52,14 @@ const MissionSection = () => {
                                             <FaChartLine />
                                         </div>
                                         <div>
-                                            <h6>Proactive Solutions</h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <h6>Our VISION</h6>
+                                            <p>
+                                                ach.
+                                                Our vision is to become a globally trusted IT innovation partner
+                                                by delivering future-ready, intelligent, and scalable technology
+                                                solutions that empower businesses to grow, transform, and lead
+                                                in the digital era.
+                                            </p>
                                         </div>
                                     </div>
 

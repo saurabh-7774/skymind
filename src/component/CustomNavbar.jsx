@@ -1,71 +1,126 @@
 import { useState } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { FaFacebookF, FaTwitter, FaYoutube, FaPinterestP } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import { IoMdMail } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-
-import lg from '../assets/image.png'
+import { useEffect } from "react";
+import lg from '../assets/ppo.jpeg'
 import { FaPhoneAlt } from "react-icons/fa";
-
+import { clientIssues } from './course'
+import { FaHome, FaInfoCircle, FaServicestack, FaPhone } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 const CustomNavbar = () => {
   const [expanded, setExpanded] = useState(false);
-  const clientIssues = [
-    {
-      slug: "AI_Data_Science_&_Analytics",
-      title: "AI, Data Science & Analytics",
-      text: "Covers artificial intelligence fundamentals, machine learning algorithms, deep learning concepts, data analytics techniques, and real-world data-driven decision-making strategies."
-    },
-    {
-      slug: "Cloud_&_DevOps",
-      title: "Cloud & DevOps",
-      text: "Focuses on cloud computing platforms, CI/CD pipelines, infrastructure as code, containerization, monitoring, and automation practices for scalable and reliable deployments."
-    },
-    {
-      slug: "Full_Stack_Development",
-      title: "Full Stack Development",
-      text: "Covers front-end and back-end development, RESTful APIs, database integration, authentication systems, and modern web technologies for building complete web applications."
-    },
-    {
-      slug: "Mobile_Development",
-      title: "Mobile Development",
-      text: "Introduces mobile app development for Android and iOS, cross-platform frameworks, UI components, state management, API integration, and performance optimization techniques."
-    },
-    {
-      slug: "UI_UX_&_Creative_Design",
-      title: "UI/UX & Creative Design",
-      text: "Focuses on user experience research, wireframing, prototyping, visual design principles, usability testing, and creating intuitive and engaging digital interfaces."
-    },
-    {
-      slug: "Database_&_Storage_Systems",
-      title: "Database & Storage Systems",
-      text: "Covers relational and NoSQL databases, data modeling, indexing, performance tuning, distributed storage systems, and secure data management strategies."
-    }
-  ]
+  const [showSideNav, setShowSideNav] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowSideNav(true);
+      } else {
+        setShowSideNav(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const navigate = useNavigate()
 
   return (
     <header className="main-header">
 
       {/* ===== Top Bar ===== */}
-      <div className="top-bar d-none d-lg-flex p-lg-4">
+      <div className="top-bar d-none d-lg-flex px-lg-4">
         <Container className="d-flex justify-content-between align-items-center px-lg-5">
           <div className="top-left px-5">
-            <span><IoMdMail className="icn" /> Hello@Email.co</span>
-            <span className="ms-4"><FaPhoneAlt className="icn" /> +62 123 486 789</span>
-          </div>
+            <span ><IoMdMail className="icn" /><a onClick={(e) => e.stopPropagation()}
+              style={{ textDecoration: "none", color: "inherit" }}
+            > info@smkcg.com</a> </span>
+            <span className="ms-4">
+              <FaPhoneAlt className="icn" />
+              <a
+                href="tel:+919309174601"
+                style={{ textDecoration: "none", color: "inherit" }} onClick={(e) => e.stopPropagation()}
+
+              >
+                +91 9309174601
+              </a>
+            </span>          </div>
 
           <div className="top-right pe-5">
             <div className="footer-social">
-              <span><FaFacebookF /></span>
-              <span><FaTwitter /></span>
-              <span><FaYoutube /></span>
-              <span><FaPinterestP /></span>
+              <span>
+                <a href="https://www.facebook.com/people/SkyMind/61585457930638/#" target="_blank" rel="noopener noreferrer">
+                  <FaFacebookF />
+                </a>
+              </span>
+
+              <span>
+                <a href="https://www.instagram.com/skymind.it/" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram />
+                </a>
+              </span>
+
+              <span>
+                <a href="https://www.linkedin.com/company/skymind-it-training-solutions/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">
+                  <FaYoutube />
+                </a>
+              </span>
+
+              <span>
+                <a href="https://www.google.com/maps?sca_esv=0c0ded2c55dfde36&sxsrf=ANbL-n6TG_khw30nQUq_USjek_Z70bA0wQ:1772647894325&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiI3NreW1pbmQgaXQgc29sdXRpb25zIG5hc2hpayB5b3V0dWJlMggQIRigARjDBEinFlD3CFiUE3ACeACQAQCYAdoCoAH0DaoBBzAuNC4yLjK4AQPIAQD4AQGYAgagAsAFwgILEAAYiQUYogQYsAPCAgsQABiABBiiBBiwA8ICCBAAGO8FGLADwgIEECMYJ8ICCBAAGIkFGKIEwgIIEAAYgAQYogTCAgUQABjvBcICChAhGAoYoAEYwwSYAwCIBgGQBgWSBwUyLjMuMaAH4RuyBwUwLjMuMbgHtwXCBwUxLjIuM8gHDoAIAQ&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KTkBWkmR6907MUJkNQID13cA&daddr=4th+floor,+Shobana+Palza,+Shahid+Circle,+Gangapur+Rd,+above+Sai+Chinese+Corner,+Abhyuday+Colony,+S.T.+Colony,+Nashik,+Maharashtra+422013" target="_blank" rel="noopener noreferrer">
+                  <FaMapMarkerAlt />
+                </a>
+              </span>
             </div>
           </div>
         </Container>
       </div>
+      {showSideNav && (
+        <div className="vertical-navbar">
 
+          <div className="vertical-item" onClick={() => navigate("/")}>
+            <FaHome />
+            <span>Home</span>
+          </div>
+
+          <div className="vertical-item" onClick={() => navigate("/about")}>
+            <FaInfoCircle />
+            <span>About</span>
+          </div>
+
+          {/* Services Dropdown */}
+          <div className="vertical-services">
+
+            <div className="vertical-item">
+              <FaServicestack />
+            </div>
+
+            <div className="vertical-services-dropdown">
+              {clientIssues.map((ok, index) => (
+                <div
+                  key={index}
+                  className="vertical-sub-item"
+                  onClick={() => navigate(`/courses/${ok.slug}`)}
+                >
+                  {ok.title}
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          <div className="vertical-item" onClick={() => navigate("/contact")}>
+            <FaPhone />
+            <span>Contact</span>
+          </div>
+
+        </div>
+      )}
       {/* ===== Main Navbar ===== */}
       <Container>
 
@@ -74,7 +129,7 @@ const CustomNavbar = () => {
           expanded={expanded}
           variant="dark"   // 👈 add this
 
-          className="custom-navbar py-lg-3 px-lg-5"
+          className="custom-navbar -lg-3 px-lg-5"
         >
           <Container fluid>
 

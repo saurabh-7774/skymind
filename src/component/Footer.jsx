@@ -1,41 +1,22 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn, FaArrowUp } from "react-icons/fa";
+import { FaFacebookF, FaYoutube, FaArrowUp, FaMapMarkerAlt, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { clientIssues } from "./course";
 
 const Footer = () => {
-    const clientIssues = [
-        {
-            slug: "AI_Data_Science_&_Analytics",
-            title: "AI, Data Science & Analytics",
-            text: "Covers artificial intelligence fundamentals, machine learning algorithms, deep learning concepts, data analytics techniques, and real-world data-driven decision-making strategies."
-        },
-        {
-            slug: "Cloud_&_DevOps",
-            title: "Cloud & DevOps",
-            text: "Focuses on cloud computing platforms, CI/CD pipelines, infrastructure as code, containerization, monitoring, and automation practices for scalable and reliable deployments."
-        },
-        {
-            slug: "Full_Stack_Development",
-            title: "Full Stack Development",
-            text: "Covers front-end and back-end development, RESTful APIs, database integration, authentication systems, and modern web technologies for building complete web applications."
-        },
-        {
-            slug: "Mobile_Development",
-            title: "Mobile Development",
-            text: "Introduces mobile app development for Android and iOS, cross-platform frameworks, UI components, state management, API integration, and performance optimization techniques."
-        },
-        {
-            slug: "UI_UX_&_Creative_Design",
-            title: "UI/UX & Creative Design",
-            text: "Focuses on user experience research, wireframing, prototyping, visual design principles, usability testing, and creating intuitive and engaging digital interfaces."
-        },
-        {
-            slug: "Database_&_Storage_Systems",
-            title: "Database & Storage Systems",
-            text: "Covers relational and NoSQL databases, data modeling, indexing, performance tuning, distributed storage systems, and secure data management strategies."
-        }
-    ]
-      const navigate = useNavigate()
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }, []);
 
     return (
         <footer className="footer-section">
@@ -45,9 +26,11 @@ const Footer = () => {
                 <Row className="gy-5">
 
                     {/* COLUMN 1 */}
-                    <Col lg={4}>
+                    <Col lg={4} data-aos="fade-up">
                         <div className="footer-logo">
+
                             <h2>SkyMind Technologies</h2>
+
                             <p>
                                 Empowering businesses and future professionals with
                                 AI-driven innovation, cloud transformation, and
@@ -60,66 +43,132 @@ const Footer = () => {
                                     placeholder="Enter your email"
                                     className="subscribe-input"
                                 />
+
                                 <Button className="subscribe-btn">
                                     contact
                                 </Button>
                             </div>
+
                         </div>
                     </Col>
 
                     {/* COLUMN 2 */}
-                    <Col lg={2}>
+                    <Col lg={2} data-aos="fade-up" data-aos-delay="100">
+
                         <h5 className="footer-title">Quick Links</h5>
+
                         <ul className="footer-links">
-                            <li>Home</li>
-                            <li>About Us</li>
-                            <li>AI Solutions</li>
-                            <li>Training Programs</li>
-                            <li>Contact</li>
+
+                            <li onClick={() => {
+                                navigate(`/`);
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}>Home</li>
+
+                            <li onClick={() => {
+                                navigate(`/about`);
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}>About Us</li>
+
+                            <li onClick={() => {
+                                navigate(`/`);
+                                window.scrollTo({ top: 1800, behavior: "smooth" });
+                            }}>AI Solutions</li>
+
+                            <li onClick={() => {
+                                navigate(`/`);
+                                window.scrollTo({ top: 3600, behavior: "smooth" });
+                            }}>Training Programs</li>
+
+                            <li onClick={() => {
+                                navigate(`/contact`);
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}>Contact</li>
+
                         </ul>
+
                     </Col>
 
                     {/* COLUMN 3 */}
-                    <Col lg={3}>
+                    <Col lg={3} data-aos="fade-up" data-aos-delay="200">
+
                         <h5 className="footer-title">Our Expertise</h5>
+
                         <ul className="footer-links">
+
                             {clientIssues.map((ok) => {
                                 return (
-                                    <li  onClick={() => navigate(`/courses/${ok.slug}`)}>{ok.title}</li>
+                                    <li
+                                        key={ok.slug}
+                                        onClick={() => {
+                                            navigate(`/courses/${ok.slug}`);
+                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                        }}
+                                    >
+                                        {ok.title}
+                                    </li>
                                 )
                             })}
+
                         </ul>
+
                     </Col>
 
                     {/* COLUMN 4 */}
-                    <Col lg={3}>
+                    <Col lg={3} data-aos="fade-up" data-aos-delay="300">
+
                         <h5 className="footer-title">Head</h5>
+
                         <p className="footer-address">
                             📍 4th Floor, Shobhana Plaza, Shahid Circle,
                             Gangapur Road, Nashik – 422013
                         </p>
 
                         <h5 className="footer-title mt-4">Working Hours</h5>
-                        <p>Monday - Friday | 9:00 AM - 6:00 PM</p>
+
+                        <p>
+                            Monday - Friday | 9:00 AM - 6:00 PM
+                        </p>
+
                     </Col>
 
                 </Row>
 
                 {/* Divider */}
-                <div className="footer-divider"></div>
+                <div className="footer-divider" data-aos="fade-up"></div>
 
                 {/* Bottom Row */}
-                <div className="footer-bottom">
+                <div className="footer-bottom" data-aos="fade-up" data-aos-delay="200">
 
                     <p>
                         © {new Date().getFullYear()} SkyMind Technologies. All Rights Reserved.
                     </p>
 
                     <div className="footer-social">
-                        <span><FaFacebookF /></span>
-                        <span><FaTwitter /></span>
-                        <span><FaYoutube /></span>
-                        <span><FaLinkedinIn /></span>
+
+                        <span>
+                            <a href="https://www.facebook.com/people/SkyMind/61585457930638/#" target="_blank" rel="noopener noreferrer">
+                                <FaFacebookF />
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href="https://www.instagram.com/skymind.it/" target="_blank" rel="noopener noreferrer">
+                                <FaInstagram />
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href="https://www.linkedin.com/company/skymind-it-training-solutions/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">
+                                <FaYoutube />
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href="https://www.google.com/maps?..." target="_blank" rel="noopener noreferrer">
+                                <FaMapMarkerAlt />
+                            </a>
+                        </span>
+
                     </div>
 
                 </div>
@@ -127,7 +176,11 @@ const Footer = () => {
             </Container>
 
             {/* Scroll Top */}
-            <div className="scroll-top">
+            <div
+                className="scroll-top"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                data-aos="zoom-in"
+            >
                 <FaArrowUp />
             </div>
 

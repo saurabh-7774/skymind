@@ -33,14 +33,15 @@ const ITCaseStudySection = ({
                         <div className="itcasestudy-right">
 
 
-
-                            <h3>
+{/* 
+                            <h2>
                                 <span>{heroTitle}</span>
-                            </h3>
+                            </h2> */}
 
-                            <p className="itcasestudy-description">
-                                {description}
-                            </p>
+                            <div
+                                className="itcasestudy-description"
+                                dangerouslySetInnerHTML={{ __html: description }}
+                            ></div>
 
 
 
@@ -50,10 +51,12 @@ const ITCaseStudySection = ({
                     {/* LEFT CLIENT INFO */}
                     <Col lg={4}>
                         <div className="itcasestudy-client">
-                            <h5></h5>
-
+                            <h5>
+                                Course Modules & Specializations
+                            </h5>
+                            <p>Dive into specialized modules covering advanced concepts, real-world applications, and industry-relevant technologies.</p>
                             {benefits.map((issue, index) => (
-                                <div key={index} className="itcasestudy-issue" onClick={()=>navigate(`/coursedetils/${issue.slug}`)}>
+                                <div key={index} className="itcasestudy-issue" onClick={() => navigate(`/coursedetils/${issue.slug}`)}>
                                     <span className="dot"></span>
                                     <div>
                                         <strong>{issue.label}</strong>

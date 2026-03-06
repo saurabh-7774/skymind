@@ -27,7 +27,7 @@ const HeroSlider = () => {
             <Container className="hero-content px-2 px-lg-5">
               <Row className="align-items-center justify-content-evenly">
 
-                <Col lg={6} className="hero-left">
+                <Col lg={6} className="hero-left" >
                   <h1>
                     Smart Minds. <br />
                     <span>Smarter Solutions.</span>
