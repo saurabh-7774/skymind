@@ -20,7 +20,7 @@ const HeroSlider = () => {
       >
 
         {/* Slide 1 */}
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="slide slide-1">
             <div className="overlay"></div>
 
@@ -57,8 +57,46 @@ const HeroSlider = () => {
               </Row>
             </Container>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
+    {/* Slide 1 */}
+        <SwiperSlide>
+          <div className="slide slide-1">
+            <div className="overlay"></div>
 
+            <Container className="hero-content px-2 px-lg-5">
+              <Row className="align-items-center justify-content-evenly">
+
+                <Col lg={6} className="hero-left">
+                  <h1>
+                    Build Your Career In <br />
+                    <span>AI & Advanced Technologies</span>
+                  </h1>
+                  <p>
+                    SkyMind IT Training & Solutions offers industry-driven internships
+                    in AI, Data Science, Cloud, Full Stack Development, and DevOps
+                    with live projects and 100% placement assistance.
+                  </p>
+                </Col>
+
+                <Col lg={4} className="form-section">
+                  <div className="hero-form-card">
+                    <h5 className="form-title">  Book a Free IT Consultation</h5>
+
+                    <Form>
+                      <Form.Control className="mb-3" placeholder="Your Name" />
+                      <Form.Control className="mb-3" placeholder="Email" />
+                      <Form.Control className="mb-3" placeholder="Your Need" />
+                      <Button className="w-100 submit-btn">
+                        Apply For Internship / Training
+                      </Button>
+                    </Form>
+                  </div>
+                </Col>
+
+              </Row>
+            </Container>
+          </div>
+        </SwiperSlide>
         {/* Slide 2 */}
         <SwiperSlide>
           <div className="slide slide-2">

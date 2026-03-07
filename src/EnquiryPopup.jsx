@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 
-const EnquiryPopup = () => {
-
-  const [show, setShow] = useState(false);
+const EnquiryPopup = ({ show, handleClose }) => {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -13,14 +11,6 @@ const EnquiryPopup = () => {
   });
 
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(true);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -31,18 +21,13 @@ const EnquiryPopup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
 
     try {
-
-      await fetch(
-        "YOUR_GOOGLE_SCRIPT_URL_HERE",
-        {
-          method: "POST",
-          body: JSON.stringify(formData),
-        }
-      );
+      await fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
 
       alert("Enquiry Submitted Successfully!");
 
@@ -52,7 +37,7 @@ const EnquiryPopup = () => {
         phone: ""
       });
 
-      setShow(false);
+      handleClose(); // close popup
 
     } catch (error) {
       console.log(error);
@@ -65,7 +50,7 @@ const EnquiryPopup = () => {
   return (
     <Modal
       show={show}
-      onHide={() => setShow(false)}
+      onHide={handleClose}
       centered
       className="enquiry-modal"
     >

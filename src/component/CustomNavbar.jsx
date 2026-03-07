@@ -10,12 +10,13 @@ import lg from '../assets/llg.png'
 import { FaPhoneAlt } from "react-icons/fa";
 import { clientIssues } from './course'
 import { courses } from './subcourse'
-
+import EnquiryPopup from "../EnquiryPopup";
 import { FaHome, FaInfoCircle, FaServicestack, FaPhone } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const CustomNavbar = () => {
   const [expanded, setExpanded] = useState(false);
   const [showSideNav, setShowSideNav] = useState(false);
+  const [showEnquiry, setShowEnquiry] = useState(false);
   const [activeCourse, setActiveCourse] = useState(courses[0].slug);
   useEffect(() => {
     const handleScroll = () => {
@@ -199,12 +200,17 @@ const CustomNavbar = () => {
                 </li>             <Nav.Link href="/contact">Contact</Nav.Link>
               </Nav>
 
-              <Button className="support-btn">
+              <Button className="support-btn" onClick={() => setShowEnquiry(true)}
+              >
                 Request Support →
               </Button>
             </Navbar.Collapse>
           </Container>
         </Navbar>        </Container>
+      <EnquiryPopup
+        show={showEnquiry}
+        handleClose={() => setShowEnquiry(false)}
+      />
     </header>
   );
 };

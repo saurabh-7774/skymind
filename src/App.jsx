@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from 'react';
 import CustomNavbar from './component/CustomNavbar';
 import HeroSection from './component/HeroSection';
 import AboutSection from './component/AboutSection';
@@ -28,6 +29,14 @@ import ScrollToTop from './ScrollToTop';
 import FloatingContact from './component/FloatingContact';
 import EnquiryPopup from './EnquiryPopup';
 function App() {
+  const [showEnquiry, setShowEnquiry] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowEnquiry(true);   // popup on load
+    }, 2000); // after 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -50,9 +59,11 @@ function App() {
         </Routes>
 
         <Footer />
-        <FloatingContact/>
-        <EnquiryPopup/>
-      </Router>
+        <FloatingContact />
+        <EnquiryPopup
+          show={showEnquiry}
+          handleClose={() => setShowEnquiry(false)}
+        />      </Router>
 
     </>
   );
