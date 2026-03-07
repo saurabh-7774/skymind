@@ -4,6 +4,73 @@
   z-index: 1000;
 }
 
+/* MEGA MENU */
+
+.mega-menu {
+  width: 850px;
+  padding: 0;
+}
+
+.mega-container {
+  display: flex;
+}
+
+/* LEFT SIDE */
+
+.mega-left {
+  width: 40%;
+  /* background: rgba(255, 255, 255, 0.05); */
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mega-course-tab {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mega-course-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mega-course-tab.active {
+  background: #fff;
+  color: #8f35d0;
+}
+
+/* RIGHT SIDE */
+
+.mega-right {
+  /* width: 10%; */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.mega-subcourse {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.3) inset;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mega-subcourse:hover {
+  background: #9b51e0;
+}
+
+.vertical-navbar-super {
+  background: rgba(131, 43, 186, 0.9);
+  border: 1px red soli;
+}
+
 .vertical-navbar {
   position: fixed;
   left: 25px;
@@ -11,8 +78,8 @@
   transform: translateY(-50%);
   z-index: 2000;
 
-  background: rgba(95, 18, 105, 0.1);
-  /* backdrop-filter: blur(15px); */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
   box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.3) inset;
 
 
@@ -339,11 +406,15 @@
 }
 
 .slide-1::before {
-  background: url("./assets/asian-helpdesk-representative-in-headphones-with-his-colleagues-providing-tech-support-services-to-1024x682.jpg") center/cover no-repeat;
+  /* background: url("./assets/asian-helpdesk-representative-in-headphones-with-his-colleagues-providing-tech-support-services-to-1024x682.jpg") center/cover no-repeat; */
+  background: url("./assets/slider1.png") center/cover no-repeat;
+
 }
 
 .slide-2::before {
-  background: url("./assets//happy-and-smiling-worker-with-headset-for-video-call-asian-tech-support-man-talking-to-online-1024x682.jpg") center/cover no-repeat;
+  background: url("./assets/slider2.png") center/cover no-repeat;
+
+  /* background: url("./assets//happy-and-smiling-worker-with-headset-for-video-call-asian-tech-support-man-talking-to-online-1024x682.jpg") center/cover no-repeat; */
 }
 
 .about-section {
@@ -373,10 +444,10 @@
   padding: 25px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  background-image: radial-gradient(at top center, #FCE0FC 0%, #ffffff 40%);
+  /* background-image: radial-gradient(at top center, #FCE0FC 0%, #ffffff 40%); */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   max-width: 320px;
-
+  backdrop-filter: blur(15px);
   box-shadow: 0px -7px 25px 0px rgba(250, 196, 250, 0.5) inset;
 }
 
@@ -1075,66 +1146,77 @@
   }
 
 }
-.whatsapp-float{
+
+.whatsapp-float {
   position: fixed;
   bottom: 90px;
   right: 20px;
-  background:#25D366;
-  color:white;
-  font-size:30px;
-  height:50px;
-  width:50px;
+  background: #25D366;
+  color: white;
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  border-radius:50%;
-  z-index:999;
-  animation:pulse 1.8s infinite;
+  border-radius: 50%;
+  z-index: 999;
+  animation: pulse 1.8s infinite;
 }
 
-.call-float{
+.call-float {
   position: fixed;
-  bottom:20px;
-  right:20px;
-  background:#007bff;
-  color:white;
-  font-size:24px;
- height:50px;
-  width:50px;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  font-size: 24px;
+  height: 50px;
+  width: 50px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;  border-radius:50%;
-  z-index:999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 999;
   animation: bounce 2s infinite;
 }
 
 /* WhatsApp pulse animation */
 @keyframes pulse {
-  0%{
+  0% {
     transform: scale(1);
-    box-shadow:0 0 0 0 rgba(37,211,102,0.6);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
   }
-  70%{
+
+  70% {
     transform: scale(1.1);
-    box-shadow:0 0 0 15px rgba(37,211,102,0);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
-  100%{
+
+  100% {
     transform: scale(1);
   }
 }
 
 /* Call bounce animation */
 @keyframes bounce {
-  0%,20%,50%,80%,100%{
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
-  40%{
+
+  40% {
     transform: translateY(-8px);
   }
-  60%{
+
+  60% {
     transform: translateY(-4px);
   }
 }

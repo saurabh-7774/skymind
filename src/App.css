@@ -1764,12 +1764,12 @@
 /* Dropdown Container */
 .services-dropdown-menu {
   position: absolute;
-  top: 120%;
-  left: 0;
+  top: 254%;
+  left: -415px;
   min-width: 280px;
   padding: 20px 0;
   border-radius: 20px;
-
+  display: flex;
   background: linear-gradient(135deg, #9559d0, #4b3aa5);
   backdrop-filter: blur(12px);
 

@@ -6,15 +6,17 @@ import { FiMail, FiPhone } from "react-icons/fi";
 import { IoMdMail } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import lg from '../assets/ppo.jpeg'
+import lg from '../assets/llg.png'
 import { FaPhoneAlt } from "react-icons/fa";
 import { clientIssues } from './course'
+import { courses } from './subcourse'
+
 import { FaHome, FaInfoCircle, FaServicestack, FaPhone } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const CustomNavbar = () => {
   const [expanded, setExpanded] = useState(false);
   const [showSideNav, setShowSideNav] = useState(false);
-
+  const [activeCourse, setActiveCourse] = useState(courses[0].slug);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -81,44 +83,46 @@ const CustomNavbar = () => {
         </Container>
       </div>
       {showSideNav && (
-        <div className="vertical-navbar">
+        <div className="vertical-navbar-super">
+          <div className="vertical-navbar">
 
-          <div className="vertical-item" onClick={() => navigate("/")}>
-            <FaHome />
-            <span>Home</span>
-          </div>
-
-          <div className="vertical-item" onClick={() => navigate("/about")}>
-            <FaInfoCircle />
-            <span>About</span>
-          </div>
-
-          {/* Services Dropdown */}
-          <div className="vertical-services">
-
-            <div className="vertical-item">
-              <FaServicestack />
+            <div className="vertical-item" onClick={() => navigate("/")}>
+              <FaHome />
+              <span>Home</span>
             </div>
 
-            <div className="vertical-services-dropdown">
-              {clientIssues.map((ok, index) => (
-                <div
-                  key={index}
-                  className="vertical-sub-item"
-                  onClick={() => navigate(`/courses/${ok.slug}`)}
-                >
-                  {ok.title}
-                </div>
-              ))}
+            <div className="vertical-item" onClick={() => navigate("/about")}>
+              <FaInfoCircle />
+              <span>About</span>
+            </div>
+
+            {/* Services Dropdown */}
+            <div className="vertical-services">
+
+              <div className="vertical-item">
+                <FaServicestack />
+              </div>
+
+              <div className="vertical-services-dropdown">
+                {clientIssues.map((ok, index) => (
+                  <div
+                    key={index}
+                    className="vertical-sub-item"
+                    onClick={() => navigate(`/courses/${ok.slug}`)}
+                  >
+                    {ok.title}
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
+            <div className="vertical-item" onClick={() => navigate("/contact")}>
+              <FaPhone />
+              <span>Contact</span>
             </div>
 
           </div>
-
-          <div className="vertical-item" onClick={() => navigate("/contact")}>
-            <FaPhone />
-            <span>Contact</span>
-          </div>
-
         </div>
       )}
       {/* ===== Main Navbar ===== */}
@@ -153,19 +157,44 @@ const CustomNavbar = () => {
                     Services +
                   </span>
 
-                  <div className="services-dropdown-menu">
-                    {clientIssues.map((ok, index) => (
-                      <div
-                        key={index}
-                        className="services-dropdown-item"
-                        onClick={() => {
-                          navigate(`/courses/${ok.slug}`);
-                          setExpanded(false);
-                        }}
-                      >
-                        {ok.title}
+                  <div className="services-dropdown-menu mega-menu">
+
+                    <div className="mega-container">
+
+                      {/* LEFT SIDE - MAIN COURSES */}
+                      <div className="mega-left">
+                        {courses.map((course, index) => (
+                          <div
+                            key={index}
+                            className={`mega-course-tab ${activeCourse === course.slug ? "active" : ""
+                              }`}
+                            onClick={() => setActiveCourse(course.slug)}
+                          >
+                            {course.heroTitle}
+                          </div>
+                        ))}
                       </div>
-                    ))}
+
+                      {/* RIGHT SIDE - SUBCOURSES */}
+                      <div className="mega-right">
+                        {courses
+                          .find((c) => c.slug === activeCourse)
+                          ?.subcourses.map((sub, i) => (
+                            <div
+                              key={i}
+                              className="mega-subcourse"
+                              onClick={() => {
+                                navigate(`/coursedetils/${sub.slug}`);
+                                setExpanded(false);
+                              }}
+                            >
+                              {sub.label}
+                            </div>
+                          ))}
+                      </div>
+
+                    </div>
+
                   </div>
                 </li>             <Nav.Link href="/contact">Contact</Nav.Link>
               </Nav>
