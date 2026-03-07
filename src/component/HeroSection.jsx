@@ -58,7 +58,7 @@ const HeroSlider = () => {
             </Container>
           </div>
         </SwiperSlide> */}
-    {/* Slide 1 */}
+        {/* Slide 1 */}
         <SwiperSlide>
           <div className="slide slide-1">
             <div className="overlay"></div>

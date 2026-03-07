@@ -18,6 +18,16 @@ const CustomNavbar = () => {
   const [showSideNav, setShowSideNav] = useState(false);
   const [showEnquiry, setShowEnquiry] = useState(false);
   const [activeCourse, setActiveCourse] = useState(courses[0].slug);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+  const [openMobileCourse, setOpenMobileCourse] = useState(null);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 992);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -158,46 +168,93 @@ const CustomNavbar = () => {
                     Services +
                   </span>
 
-                  <div className="services-dropdown-menu mega-menu">
+                  {/* ===== DESKTOP MEGA MENU ===== */}
+                  {!isMobile && (
+                    <div className="services-dropdown-menu mega-menu">
+                      <div className="mega-container">
 
-                    <div className="mega-container">
-
-                      {/* LEFT SIDE - MAIN COURSES */}
-                      <div className="mega-left">
-                        {courses.map((course, index) => (
-                          <div
-                            key={index}
-                            className={`mega-course-tab ${activeCourse === course.slug ? "active" : ""
-                              }`}
-                            onClick={() => setActiveCourse(course.slug)}
-                          >
-                            {course.heroTitle}
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* RIGHT SIDE - SUBCOURSES */}
-                      <div className="mega-right">
-                        {courses
-                          .find((c) => c.slug === activeCourse)
-                          ?.subcourses.map((sub, i) => (
+                        {/* LEFT SIDE */}
+                        <div className="mega-left">
+                          {courses.map((course, index) => (
                             <div
-                              key={i}
-                              className="mega-subcourse"
-                              onClick={() => {
-                                navigate(`/coursedetils/${sub.slug}`);
-                                setExpanded(false);
-                              }}
+                              key={index}
+                              className={`mega-course-tab ${activeCourse === course.slug ? "active" : ""
+                                }`}
+                              onClick={() => setActiveCourse(course.slug)}
                             >
-                              {sub.label}
+                              {course.heroTitle}
                             </div>
                           ))}
+                        </div>
+
+                        {/* RIGHT SIDE */}
+                        <div className="mega-right">
+                          {courses
+                            .find((c) => c.slug === activeCourse)
+                            ?.subcourses.map((sub, i) => (
+                              <div
+                                key={i}
+                                className="mega-subcourse"
+                                onClick={() => {
+                                  navigate(`/coursedetils/${sub.slug}`);
+                                  setExpanded(false);
+                                }}
+                              >
+                                {sub.label}
+                              </div>
+                            ))}
+                        </div>
+
                       </div>
+                    </div>
+                  )}
+
+                  {/* ===== MOBILE MENU ===== */}
+                  {isMobile && (
+                    <div className="mobile-services-menu">
+
+                      {courses.map((course, index) => {
+                        const isOpen = openMobileCourse === course.slug;
+
+                        return (
+                          <div key={index} className="mobile-course-block">
+
+                            <div
+                              className="mobile-course-title"
+                              onClick={() =>
+                                setOpenMobileCourse(isOpen ? null : course.slug)
+                              }
+                            >
+                              {course.heroTitle}
+                              <span className={`mobile-arrow ${isOpen ? "open" : ""}`}>
+                                ▾
+                              </span>
+                            </div>
+
+                            {isOpen && (
+                              <div className="mobile-subcourses">
+                                {course.subcourses.map((sub, i) => (
+                                  <div
+                                    key={i}
+                                    className="mobile-subcourse"
+                                    onClick={() => {
+                                      navigate(`/coursedetils/${sub.slug}`);
+                                      setExpanded(false);
+                                    }}
+                                  >
+                                    {sub.label}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+
+                          </div>
+                        );
+                      })}
 
                     </div>
-
-                  </div>
-                </li>             <Nav.Link href="/contact">Contact</Nav.Link>
+                  )}
+                </li>         <Nav.Link href="/contact">Contact</Nav.Link>
               </Nav>
 
               <Button className="support-btn" onClick={() => setShowEnquiry(true)}
