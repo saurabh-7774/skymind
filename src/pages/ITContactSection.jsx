@@ -26,7 +26,8 @@ const ITContactSection = () => {
                 <FiMapPin />
               </div>
               <h5>Office Address</h5>
-              <p>TechCare Center, Jakarta</p>
+              <p>📍 4th Floor, Shobhana Plaza, Shahid Circle,
+                Gangapur Road, Nashik – 422013</p>
             </div>
           </Col>
 
@@ -36,7 +37,13 @@ const ITContactSection = () => {
                 <FiPhone />
               </div>
               <h5>Telephone</h5>
-              <p>+62 123 456 789</p>
+              <p><a
+                href="tel:+919309174601"
+                style={{ textDecoration: "none", color: "inherit" }} onClick={(e) => e.stopPropagation()}
+
+              >
+                +91 9309174601
+              </a></p>
             </div>
           </Col>
 
@@ -46,7 +53,9 @@ const ITContactSection = () => {
                 <FiMail />
               </div>
               <h5>Email Address</h5>
-              <p>info@example.com</p>
+              <p><a onClick={(e) => e.stopPropagation()}
+                style={{ textDecoration: "none", color: "inherit" }}
+              > info@smkcg.com</a> </p>
             </div>
           </Col>
         </Row>
@@ -97,8 +106,12 @@ const ITContactSection = () => {
             <div className="itcontact-map">
               <iframe
                 title="map"
-                src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                frameBorder="0"
+                src="https://www.google.com/maps?q=4th+floor+Shobana+Plaza+Shahid+Circle+Gangapur+Rd+Nashik&output=embed"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
               ></iframe>
             </div>
           </Col>
