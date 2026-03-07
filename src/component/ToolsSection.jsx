@@ -22,7 +22,7 @@ const ToolsSection = () => {
             <Container>
                 <Row className="align-items-center justify-content-evenly">
 
-                    {/* LEFT CONTENT */}
+                    {/* LEFT CONTENT */}``
                     <Col lg={6} data-aos="fade-right">
                         <div className="tools-content">
 

@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-import defaultHero from '../assets/1_3.jpg'
+import defaultHero from '../assets/aobutpage.png'
 
 const AboutHero = () => {
   const background =  defaultHero;

@@ -6,6 +6,10 @@
   cursor: pointer;
 }
 
+.footer-social {
+  margin-right: 100px;
+}
+
 .tools-section {
   padding: 120px 0;
   background: linear-gradient(135deg, #2f2269, #4b3aa5);
@@ -158,6 +162,9 @@
 /* ============================= */
 
 @media (max-width: 991px) {
+  .footer-social {
+    margin-right: 10px;
+  }
 
   .tools-section {
     padding: 80px 0;

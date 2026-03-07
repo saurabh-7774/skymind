@@ -20,6 +20,7 @@ const CustomNavbar = () => {
   const [activeCourse, setActiveCourse] = useState(courses[0].slug);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
   const [openMobileCourse, setOpenMobileCourse] = useState(null);
+  const [hideNavbar, setHideNavbar] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 992);
@@ -32,8 +33,10 @@ const CustomNavbar = () => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
         setShowSideNav(true);
+        setHideNavbar(true); // hide navbar
       } else {
         setShowSideNav(false);
+        setHideNavbar(false); // show navbar
       }
     };
 
@@ -41,14 +44,19 @@ const CustomNavbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const navigate = useNavigate()
 
   return (
     <header className="main-header">
-
+      {hideNavbar && (
+        <div className="floating-logo" onClick={() => navigate("/")}>
+          <img src={lg} alt="logo" />
+        </div>
+      )}
       {/* ===== Top Bar ===== */}
       <div className="top-bar d-none d-lg-flex px-lg-4">
-        <Container className="d-flex justify-content-between align-items-center px-lg-5">
+        {!hideNavbar && (<Container className="d-flex justify-content-between align-items-center px-lg-5">
           <div className="top-left px-5">
             <span ><IoMdMail className="icn" /><a onClick={(e) => e.stopPropagation()}
               style={{ textDecoration: "none", color: "inherit" }}
@@ -91,10 +99,10 @@ const CustomNavbar = () => {
               </span>
             </div>
           </div>
-        </Container>
+        </Container>)}
       </div>
       {showSideNav && (
-        <div className="vertical-navbar-super">
+        <div className="vertical-navbar-super d-none d-lg-block">
           <div className="vertical-navbar">
 
             <div className="vertical-item" onClick={() => navigate("/")}>
