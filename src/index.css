@@ -853,7 +853,7 @@
 .testimonial-section {
   position: relative;
   padding: 120px 0;
-  background: url("./assets/beautiful-woman-wearing-headsets-worker-call-centre-working-customer-support-service-operator--1024x682.jpg") center/cover no-repeat;
+  background: url("./assets/slider1.png") center/cover no-repeat;
   color: #fff;
 }
 
@@ -945,7 +945,7 @@
 
 .about-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   color: #fff;

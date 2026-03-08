@@ -1,18 +1,21 @@
 import caseImg from '../assets/customer-service-man-at-work.jpg'
+import ai from '../assets/maincourses/AI_Data_Science_&_Analytic.png'
+import cloud from '../assets/maincourses/Cloud_&_DevOps.png'
 import aiimg from '../assets/1_3.jpg'
 export const courses = [
 
-    // 1️⃣ AI, Data Science & Analytics
-    {
-        slug: "AI_Data_Science_&_Analytics",
-        heroTitle: "AI, Data Science & Analytics",
-        heroHighlight: "Advanced AI Engineering",
-        heroDescription:
-            "Build intelligent systems using Machine Learning, Deep Learning, and Data Engineering. Learn how to design smart algorithms, process large datasets, and develop real-world AI applications. Gain practical experience with modern AI tools, models, and deployment techniques.", category: "AI & Data Science",
-        badge: "AI & DATA SCIENCE",
-        title: "Become an Expert in",
-        highlight: "AI & Machine Learning",
-        description: `
+  // 1️⃣ AI, Data Science & Analytics
+  {
+    slug: "AI_Data_Science_&_Analytics",
+    image2: ai,
+    heroTitle: "AI, Data Science & Analytics",
+    heroHighlight: "Advanced AI Engineering",
+    heroDescription:
+      "Build intelligent systems using Machine Learning, Deep Learning, and Data Engineering. Learn how to design smart algorithms, process large datasets, and develop real-world AI applications. Gain practical experience with modern AI tools, models, and deployment techniques.", category: "AI & Data Science",
+    badge: "AI & DATA SCIENCE",
+    title: "Become an Expert in",
+    highlight: "AI & Machine Learning",
+    description: `
     <p>
       This program is designed to provide strong foundations in 
       <strong>Artificial Intelligence, Machine Learning, Deep Learning, NLP, and Data Engineering.</strong>
@@ -49,30 +52,32 @@ export const courses = [
       gain real industry exposure while building their professional portfolio.
     </p>
   `, image: aiimg,
-        clientTitle: "About This Course",
-        clientDescription:
-            "Industry-focused AI training with hands-on model building and real-world case studies.",
-        subcourses: [
-            { label: "Advanced AI Engineering", slug: "advanced-ai-engineering" },
-            { label: "Machine Learning", slug: "machine-learning" },
-            { label: "Deep Learning", slug: "deep-learning" },
-            { label: "NLP & Computer Vision", slug: "nlp-computer-vision" },
-            { label: "Data Engineering", slug: "data-engineering" },
-        ],
-    },
+    clientTitle: "About This Course",
+    clientDescription:
+      "Industry-focused AI training with hands-on model building and real-world case studies.",
+    subcourses: [
+      { label: "Advanced AI Engineering", slug: "advanced-ai-engineering" },
+      { label: "Machine Learning", slug: "machine-learning" },
+      { label: "Deep Learning", slug: "deep-learning" },
+      { label: "NLP & Computer Vision", slug: "nlp-computer-vision" },
+      { label: "Data Engineering", slug: "data-engineering" },
+    ],
+  },
 
-    // 2️⃣ Cloud & DevOps
-    {
-        slug: "Cloud_&_DevOps",
-        heroTitle: "Cloud & DevOps",
-        heroHighlight: "AWS & CI/CD",
-        heroDescription:
-            "Master cloud platforms and DevOps practices for scalable deployments.",
-        category: "Cloud & DevOps",
-        badge: "CLOUD & DEVOPS",
-        title: "Become a Certified",
-        highlight: "Cloud & DevOps Engineer",
-        description: `
+  // 2️⃣ Cloud & DevOps
+  {
+    slug: "Cloud_&_DevOps",
+    image2: cloud,
+
+    heroTitle: "Cloud & DevOps",
+    heroHighlight: "AWS & CI/CD",
+    heroDescription:
+      "Master cloud platforms and DevOps practices for scalable deployments.",
+    category: "Cloud & DevOps",
+    badge: "CLOUD & DEVOPS",
+    title: "Become a Certified",
+    highlight: "Cloud & DevOps Engineer",
+    description: `
     <p>
       The <strong>Cloud & DevOps program</strong> is designed to equip learners with the
       skills required to build, deploy, and manage scalable cloud infrastructure
@@ -123,29 +128,29 @@ export const courses = [
       be able to design highly available systems, deploy applications faster,
       and maintain reliable infrastructure in modern cloud environments.
     </p>`, image: caseImg,
-        clientTitle: "About This Course",
-        clientDescription:
-            "Hands-on cloud labs and real-time DevOps pipeline implementation.",
-        subcourses: [
-            { label: "AWS Solutions Architect", slug: "aws-solutions-architect" },
-            { label: "Azure & GCP", slug: "azure-gcp" },
-            { label: "DevSecOps", slug: "devsecops" },
-            { label: "CI/CD Automation", slug: "ci-cd-automation" },
-        ],
-    },
+    clientTitle: "About This Course",
+    clientDescription:
+      "Hands-on cloud labs and real-time DevOps pipeline implementation.",
+    subcourses: [
+      { label: "AWS Solutions Architect", slug: "aws-solutions-architect" },
+      { label: "Azure & GCP", slug: "azure-gcp" },
+      { label: "DevSecOps", slug: "devsecops" },
+      { label: "CI/CD Automation", slug: "ci-cd-automation" },
+    ],
+  },
 
-    // 3️⃣ Full Stack Development
-    {
-        slug: "Full_Stack_Development",
-        heroTitle: "Full Stack Development",
-        heroHighlight: "Modern Web Technologies",
-        heroDescription:
-            "Build complete web applications from frontend to backend.",
-        category: "Full Stack Development",
-        badge: "FULL STACK DEVELOPMENT",
-        title: "Become a Professional",
-        highlight: "Full Stack Developer",
-        description: ` <p>
+  // 3️⃣ Full Stack Development
+  {
+    slug: "Full_Stack_Development",
+    heroTitle: "Full Stack Development",
+    heroHighlight: "Modern Web Technologies",
+    heroDescription:
+      "Build complete web applications from frontend to backend.",
+    category: "Full Stack Development",
+    badge: "FULL STACK DEVELOPMENT",
+    title: "Become a Professional",
+    highlight: "Full Stack Developer",
+    description: ` <p>
       The <strong>Full Stack Development program</strong> is designed for individuals
       who want to build modern, scalable, and high-performance web applications.
       A full stack developer works across the entire software development process,
@@ -273,30 +278,30 @@ export const courses = [
       skills needed to build production-ready applications and succeed
       in modern software development environments.
     </p>`, image: caseImg,
-        clientTitle: "About This Course",
-        clientDescription:
-            "Project-based learning with industry-level application development.",
-        subcourses: [
-            { label: "MERN Stack", slug: "mern-stack" },
-            { label: "MEAN Stack", slug: "mean-stack" },
-            { label: "Full Stack Java", slug: "full-stack-java" },
-            { label: "Full Stack Python", slug: "full-stack-python" },
-            { label: ".NET & PHP", slug: "dotnet-php" },
-        ],
-    },
+    clientTitle: "About This Course",
+    clientDescription:
+      "Project-based learning with industry-level application development.",
+    subcourses: [
+      { label: "MERN Stack", slug: "mern-stack" },
+      { label: "MEAN Stack", slug: "mean-stack" },
+      { label: "Full Stack Java", slug: "full-stack-java" },
+      { label: "Full Stack Python", slug: "full-stack-python" },
+      { label: ".NET & PHP", slug: "dotnet-php" },
+    ],
+  },
 
-    // 4️⃣ Mobile Development
-    {
-        slug: "Mobile_Development",
-        heroTitle: "Mobile Development",
-        heroHighlight: "Android & iOS",
-        heroDescription:
-            "Build high-performance mobile apps for Android and iOS platforms.",
-        category: "Mobile Development",
-        badge: "MOBILE DEVELOPMENT",
-        title: "Become a Skilled",
-        highlight: "Mobile App Developer",
-        description: `<p>
+  // 4️⃣ Mobile Development
+  {
+    slug: "Mobile_Development",
+    heroTitle: "Mobile Development",
+    heroHighlight: "Android & iOS",
+    heroDescription:
+      "Build high-performance mobile apps for Android and iOS platforms.",
+    category: "Mobile Development",
+    badge: "MOBILE DEVELOPMENT",
+    title: "Become a Skilled",
+    highlight: "Mobile App Developer",
+    description: `<p>
       The <strong>Mobile App Development program</strong> is designed to help
       learners build modern, scalable, and high-performance mobile applications
       for both Android and iOS platforms. With the rapid growth of smartphones
@@ -419,30 +424,30 @@ export const courses = [
       modern mobile applications used by thousands of users.
     </p>
   `,
-        image: caseImg,
-        clientTitle: "About This Course",
-        clientDescription:
-            "Hands-on app development with real-world publishing guidance.",
-        subcourses: [
-            { label: "Android (Java/Kotlin)", slug: "android-development" },
-            { label: "iOS (Swift)", slug: "ios-development" },
-            { label: "Flutter & React Native", slug: "flutter-react-native" },
-        ],
-    },
+    image: caseImg,
+    clientTitle: "About This Course",
+    clientDescription:
+      "Hands-on app development with real-world publishing guidance.",
+    subcourses: [
+      { label: "Android (Java/Kotlin)", slug: "android-development" },
+      { label: "iOS (Swift)", slug: "ios-development" },
+      { label: "Flutter & React Native", slug: "flutter-react-native" },
+    ],
+  },
 
-    // 5️⃣ UI/UX & Creative Design
-    {
-        slug: "UI_UX_&_Creative_Design",
-        heroTitle: "UI/UX & Creative Design",
-        heroHighlight: "Design Thinking",
-        heroDescription:
-            "Design intuitive, modern and engaging digital experiences.",
-        category: "UI/UX Design",
-        badge: "UI/UX & DESIGN",
-        title: "Become a Creative",
-        highlight: "UI/UX Designer",
-        description:
-            `
+  // 5️⃣ UI/UX & Creative Design
+  {
+    slug: "UI_UX_&_Creative_Design",
+    heroTitle: "UI/UX & Creative Design",
+    heroHighlight: "Design Thinking",
+    heroDescription:
+      "Design intuitive, modern and engaging digital experiences.",
+    category: "UI/UX Design",
+    badge: "UI/UX & DESIGN",
+    title: "Become a Creative",
+    highlight: "UI/UX Designer",
+    description:
+      `
 <p>
 The <strong>UI/UX & Creative Design program</strong> focuses on building the skills required to design modern, engaging, and user-friendly digital experiences. In today’s digital world, great design plays a crucial role in how users interact with websites, mobile applications, and software products. This course helps learners understand how to combine creativity with usability to create visually appealing and highly functional digital products.
 </p>
@@ -530,28 +535,28 @@ engaging digital products that deliver excellent user experiences and
 visually compelling interfaces across web and mobile platforms.
 </p>
 `, image: caseImg,
-        clientTitle: "About This Course",
-        clientDescription:
-            "Practical design projects with portfolio-ready case studies.",
-        subcourses: [
-            { label: "UI/UX Design", slug: "ui-ux-design" },
-            { label: "Figma & Prototyping", slug: "figma-prototyping" },
-            { label: "Graphic Design", slug: "graphic-design" },
-        ],
-    },
+    clientTitle: "About This Course",
+    clientDescription:
+      "Practical design projects with portfolio-ready case studies.",
+    subcourses: [
+      { label: "UI/UX Design", slug: "ui-ux-design" },
+      { label: "Figma & Prototyping", slug: "figma-prototyping" },
+      { label: "Graphic Design", slug: "graphic-design" },
+    ],
+  },
 
-    // 6️⃣ Database & Storage Systems
-    {
-        slug: "Database_&_Storage_Systems",
-        heroTitle: "Database & Storage Systems",
-        heroHighlight: "SQL & NoSQL",
-        heroDescription:
-            "Master modern database systems and distributed storage.",
-        category: "Database Systems",
-        badge: "DATABASE & STORAGE",
-        title: "Become an Expert in",
-        highlight: "Database Management",
-        description: `
+  // 6️⃣ Database & Storage Systems
+  {
+    slug: "Database_&_Storage_Systems",
+    heroTitle: "Database & Storage Systems",
+    heroHighlight: "SQL & NoSQL",
+    heroDescription:
+      "Master modern database systems and distributed storage.",
+    category: "Database Systems",
+    badge: "DATABASE & STORAGE",
+    title: "Become an Expert in",
+    highlight: "Database Management",
+    description: `
 <p>
 The <strong>Database & Storage Systems program</strong> is designed to provide
 in-depth knowledge of how modern applications store, manage, and process large
@@ -687,13 +692,13 @@ skills required to build reliable, scalable, and secure data systems that
 power modern digital applications.
 </p>
 `, image: caseImg,
-        clientTitle: "About This Course",
-        clientDescription:
-            "Comprehensive database training with practical implementations.",
-        subcourses: [
-            { label: "SQL & NoSQL", slug: "sql-nosql" },
-            { label: "Data Warehousing", slug: "data-warehousing" },
-            { label: "Database Administration", slug: "database-administration" },
-        ],
-    },
+    clientTitle: "About This Course",
+    clientDescription:
+      "Comprehensive database training with practical implementations.",
+    subcourses: [
+      { label: "SQL & NoSQL", slug: "sql-nosql" },
+      { label: "Data Warehousing", slug: "data-warehousing" },
+      { label: "Database Administration", slug: "database-administration" },
+    ],
+  },
 ];

@@ -197,9 +197,11 @@
 /* HERO IMAGE */
 .support-hero {
   position: relative;
-  background: url("./assets/asian-helpdesk-representative-in-headphones-with-his-colleagues-providing-tech-support-services-to.jpg") center/cover no-repeat;
+  /* background: url("./assets/asian-helpdesk-representative-in-headphones-with-his-colleagues-providing-tech-support-services-to.jpg") center/cover no-repeat; */
   padding: 120px 0;
   color: #fff;
+  background: url("./assets/home4.png") center/cover no-repeat;
+
 }
 
 .support-hero .overlay {
@@ -942,7 +944,7 @@
 .cta-section {
   position: relative;
   padding: 140px 0;
-  background: url("./assets//operator-in-headphones-with-microphone-consulting-client-on-laptop-in-customer-support-service--1024x684.jpg") center/cover no-repeat;
+  background: url("./assets/aobutpage.png") center/cover no-repeat;
   color: #fff;
   text-align: center;
   overflow: hidden;
@@ -1044,7 +1046,7 @@
 /* ============================= */
 
 .mission-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: radial-gradient(at bottom left, #a692ff 0%, #d6282800 25%);
 }
 

@@ -2,7 +2,11 @@ import { useParams } from "react-router-dom";
 import ServicesHero from "./ServicesHero";
 import MernServiceSection from "./MernSection";
 import mernImg from "../assets/asian-helpdesk-representative-in-headphones-with-his-colleagues-providing-tech-support-services-to.jpg";
-import aiImg from "../assets/Grid-10-3.png";
+import aiImg from "../assets/course/AI.png";
+import mlImg from "../assets/course/ML.png";
+import dlImg from "../assets/course/DL.png";
+import nlpImg from "../assets/course/NLP.png";
+
 import ToolsSection from "../component/ToolsSection";
 
 const courses = [
@@ -11,6 +15,7 @@ const courses = [
 
     {
         slug: "advanced-ai-engineering",
+        bgImage: aiImg,
         hero: {
             title: "Advanced",
             highlight: "AI Engineering",
@@ -62,6 +67,8 @@ const courses = [
 
     {
         slug: "machine-learning",
+        bgImage: mlImg,
+
         hero: {
             title: "Professional",
             highlight: "Machine Learning",
@@ -226,6 +233,8 @@ and Data Analyst.
 
     {
         slug: "deep-learning",
+        bgImage: dlImg,
+
         hero: {
             title: "Advanced",
             highlight: "Deep Learning",
@@ -425,6 +434,8 @@ into career opportunities and industry roles in AI and deep learning.
 
     {
         slug: "nlp-computer-vision",
+                bgImage: nlpImg,
+
         hero: {
             title: "NLP &",
             highlight: "Computer Vision",
@@ -4213,6 +4224,7 @@ const CourseDetails = () => {
     return (
         <>
             <ServicesHero
+                bgImage={course.bgImage}
                 title={course.hero.title}
                 highlight={course.hero.highlight}
                 description={course.hero.description}

@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaCheck } from "react-icons/fa";
-import supportImg from "../assets/smiling-customer-support-service-operator-with-hands-free-headset-working-in-office.jpg";
+import supportImg from "../assets/home5.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -48,9 +48,11 @@ const AboutSection = () => {
                                 <li data-aos="fade-up" data-aos-delay="500"><FaCheck /> Industry-Driven Internships & Placement Assistance</li>
                             </ul>
 
-                            <Button className="about-btn" data-aos="zoom-in" data-aos-delay="600">
+                            {/* <Button className="about-btn" data-aos="zoom-in" data-aos-delay="600"
+                            
+                            >
                                 Explore Our Services →
-                            </Button>
+                            </Button> */}
 
                         </div>
                     </Col>

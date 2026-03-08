@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import img1 from "../assets/indian-call-center-agent-wearing-headset-working-on-customer-support-service--1024x683.jpg";
-import img2 from "../assets/female-person-working-in-support-service-of-company-682x1024.jpg";
+import img1 from "../assets/home6.png";
+import img2 from "../assets/home7.png";
 
 const ToolsSection = () => {
 

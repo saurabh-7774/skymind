@@ -2,16 +2,16 @@ import { Container, Button } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 const CtaSection = () => {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out"
-    });
-  }, []);
+  const navigate = useNavigate()
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        easing: "ease-in-out"
+      });
+    }, []);
 
   return (
     <section className="cta-section">
@@ -40,6 +40,7 @@ const CtaSection = () => {
           className="contact-btn"
           data-aos="zoom-in"
           data-aos-delay="300"
+          onClick={()=>navigate("/coursedetils/advanced-ai-engineering")}
         >
           Get Started Today →
         </Button>

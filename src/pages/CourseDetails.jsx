@@ -17,7 +17,7 @@ const CourseDetails = () => {
     return (
         <>
             <ServicesHero
-                bgImage={course.image}
+                bgImage={course.image2}
 
                 title={course.heroTitle}
                 highlight={course.heroHighlight}

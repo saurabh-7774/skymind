@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import faqImg from "../assets/customer-service-man-at-work-1024x682.jpg";
+import faqImg from "../assets/home8.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

@@ -5,24 +5,24 @@ import im from '../assets/businessman-wearing-headset-talking-to-caller-in-busy-
 import "swiper/css";
 
 const testimonials = [
+    // {
+    //     text: "SMKCG helped us implement an AI-driven analytics system that significantly improved our operational efficiency and decision-making process.",
+    //     name: "Rahul Mehta",
+    //     role: "CTO, FinTech Company",
+    //     image: im,
+    // },
     {
-        text: "SMKCG helped us implement an AI-driven analytics system that significantly improved our operational efficiency and decision-making process.",
-        name: "Rahul Mehta",
-        role: "CTO, FinTech Company",
-        image: im,
-    },
-    {
-        text: "The SkyMind internship program gave me real-world project experience in Machine Learning and helped me crack multiple technical interviews.",
+        text: "The SkyMind internship program gave me real-world project experience in Machine Learning and helped me crack interviews.",
         name: "Priya Sharma",
         role: "Data Science Intern",
         image: im,
     },
-    {
-        text: "Their cloud and DevOps expertise enabled us to migrate to AWS seamlessly with secure and scalable infrastructure.",
-        name: "Amit Kulkarni",
-        role: "IT Manager, Enterprise Client",
-        image: im,
-    },
+    // {
+    //     text: "Their cloud and DevOps expertise enabled us to migrate to AWS seamlessly with secure and scalable infrastructure.",
+    //     name: "Amit Kulkarni",
+    //     role: "IT Manager, Enterprise Client",
+    //     image: im,
+    // },
     {
         text: "The mentorship and mock interview sessions boosted my confidence and helped me secure a full stack developer role.",
         name: "Sneha Patil",
@@ -60,7 +60,7 @@ const TestimonialSection = () => {
                                         <p>{item.text}</p>
 
                                         <div className="client-info">
-                                            <img src={item.image} alt={item.name} />
+                                            {/* <img src={item.image} alt={item.name} /> */}
                                             <div>
                                                 <h6>{item.name}</h6>
                                                 <span>{item.role}</span>
