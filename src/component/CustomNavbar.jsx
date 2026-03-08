@@ -102,7 +102,7 @@ const CustomNavbar = () => {
         </Container>)}
       </div>
       {showSideNav && (
-        <div className="vertical-navbar-super d-none d-lg-block">
+        <div className="vertical-navbar-super ">
           <div className="vertical-navbar">
 
             <div className="vertical-item" onClick={() => navigate("/")}>
