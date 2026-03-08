@@ -6,9 +6,27 @@ import aiImg from "../assets/course/AI.png";
 import mlImg from "../assets/course/ML.png";
 import dlImg from "../assets/course/DL.png";
 import nlpImg from "../assets/course/NLP.png";
-
+import awsImg from '../assets/course/AWS.png'
+import dataImg from '../assets/course/DATA.png'
+import azureImg from '../assets/course/azure.png'
+import REACTimg from '../assets/course/REACT.png'
+import ANGULAR from '../assets/course/ANGULAR.png'
+import DEVOPSImg from '../assets/course/DEVOPS.png'
+import JAVAimg from '../assets/course/JAVA.png'
+import PYTHONimg from '../assets/course/PYTHON.png'
+import NETimg from '../assets/course/NET.png'
+import CICDAutomation from '../assets/course/CICDAutomation.png'
+import ANDROIDimg from '../assets/course/ANDROID.png'
+import SWIFT from '../assets/course/SWIFT.png'
+import FLUTTER from '../assets/course/FLUTTER.png'
+import UIUXDesign from '../assets/course/UIUXDesign.png'
+import uiux from '../assets/course/uiux.png'
+import prototype from '../assets/course/prototype.png'
 import ToolsSection from "../component/ToolsSection";
-
+import sql from '../assets/course/sql.png'
+import Data_Warehousing from '../assets/course/Data Warehousing.png'
+import data_admin from '../assets/course/data_admin.png'
+import grapgic from '../assets/course/grapgic.png'
 const courses = [
 
     // ================= AI & DATA =================
@@ -434,7 +452,7 @@ into career opportunities and industry roles in AI and deep learning.
 
     {
         slug: "nlp-computer-vision",
-                bgImage: nlpImg,
+        bgImage: nlpImg,
 
         hero: {
             title: "NLP &",
@@ -647,6 +665,8 @@ healthcare, finance, e-commerce, robotics, and autonomous systems.
 
     {
         slug: "data-engineering",
+        bgImage: dataImg,
+
         hero: {
             title: "Modern",
             highlight: "Data Engineering",
@@ -860,6 +880,8 @@ introduces career paths and job opportunities in the field.
 
     {
         slug: "aws-solutions-architect",
+        bgImage: awsImg,
+
         hero: {
             title: "AWS",
             highlight: "Solutions Architect",
@@ -1062,6 +1084,8 @@ opportunities in cloud architecture.
 
     {
         slug: "azure-gcp",
+        bgImage: azureImg,
+
         hero: {
             title: "Azure &",
             highlight: "Google Cloud",
@@ -1265,6 +1289,8 @@ in cloud computing.
 
     {
         slug: "devsecops",
+        bgImage: DEVOPSImg,
+
         hero: {
             title: "Secure",
             highlight: "DevSecOps",
@@ -1474,6 +1500,8 @@ for secure software development and cloud infrastructure.
 
     {
         slug: "ci-cd-automation",
+        bgImage: CICDAutomation,
+
         hero: {
             title: "CI/CD",
             highlight: "Automation",
@@ -1684,6 +1712,8 @@ CI/CD automation skills are highly valued in DevOps and cloud engineering roles.
 
     {
         slug: "mern-stack",
+                bgImage: REACTimg,
+
         hero: {
             title: "Full Stack",
             highlight: "MERN Stack",
@@ -1892,6 +1922,8 @@ JavaScript developers.
 
     {
         slug: "mean-stack",
+                bgImage: ANGULAR,
+
         hero: {
             title: "Full Stack",
             highlight: "MEAN Stack",
@@ -2100,7 +2132,9 @@ JavaScript developers.
 
     {
         slug: "full-stack-java",
-        hero: {
+bgImage: JAVAimg,
+        hero: {        
+
             title: "Enterprise",
             highlight: "Full Stack Java",
             description: "Develop enterprise-grade applications using Java."
@@ -2317,6 +2351,8 @@ development.
 
     {
         slug: "full-stack-python",
+                bgImage: PYTHONimg,
+
         hero: {
             title: "Professional",
             highlight: "Full Stack Python",
@@ -2522,6 +2558,8 @@ and strong ecosystem.
 
     {
         slug: "dotnet-php",
+                bgImage: NETimg,
+
         hero: {
             title: ".NET &",
             highlight: "PHP Development",
@@ -2679,6 +2717,8 @@ modern web applications and digital platforms.
 
     {
         slug: "android-development",
+                bgImage: ANDROIDimg,
+
         hero: { title: "Android", highlight: "Java & Kotlin", description: "Build native Android apps." },
         serviceSection: {
             badgeText: "📱 ANDROID DEVELOPMENT",
@@ -2892,6 +2932,8 @@ the digital ecosystem.
 
     {
         slug: "ios-development",
+                bgImage: SWIFT,
+
         hero: { title: "iOS", highlight: "Swift", description: "Build powerful iOS apps." },
         serviceSection: {
             badgeText: "🍎 IOS DEVELOPMENT",
@@ -3040,6 +3082,7 @@ within the Apple ecosystem.
 
     {
         slug: "flutter-react-native",
+        bgImage: FLUTTER,
         hero: { title: "Cross Platform", highlight: "Flutter & React Native", description: "Build cross-platform mobile apps." },
         serviceSection: {
             badgeText: "📲 FLUTTER & REACT NATIVE",
@@ -3267,6 +3310,7 @@ mobile applications across industries.
 
     {
         slug: "ui-ux-design",
+        bgImage: UIUXDesign,
         hero: { title: "Creative", highlight: "UI/UX Design", description: "Design modern user experiences." },
         serviceSection: {
             badgeText: "🎨 UI/UX DESIGN",
@@ -3403,6 +3447,8 @@ impactful digital products.
 
     {
         slug: "figma-prototyping",
+                bgImage: prototype,
+
         hero: { title: "Figma", highlight: "Prototyping", description: "Create interactive prototypes." },
         serviceSection: {
             badgeText: "🖌 FIGMA & PROTOTYPING",
@@ -3561,6 +3607,7 @@ The course concludes with portfolio building and preparation for UI/UX design ca
 
     {
         slug: "graphic-design",
+        bgImage: grapgic,
         hero: { title: "Creative", highlight: "Graphic Design", description: "Create stunning visuals." },
         serviceSection: {
             badgeText: "🖼 GRAPHIC DESIGN",
@@ -3699,6 +3746,8 @@ that communicates ideas effectively and enhances brand identity.
 
     {
         slug: "sql-nosql",
+                bgImage: sql,
+
         hero: { title: "SQL &", highlight: "NoSQL", description: "Master relational and non-relational databases." },
         serviceSection: {
             badgeText: "🗄 DATABASE SYSTEMS",
@@ -3851,6 +3900,8 @@ scalable applications in modern software environments.
 
     {
         slug: "data-warehousing",
+                bgImage: Data_Warehousing,
+
         hero: { title: "Modern", highlight: "Data Warehousing", description: "Build enterprise data warehouses." },
         serviceSection: {
             badgeText: "📦 DATA WAREHOUSING",
@@ -4049,6 +4100,8 @@ Data warehousing professionals play a key role in managing enterprise data syste
 
     {
         slug: "database-administration",
+                bgImage: data_admin,
+
         hero: { title: "Professional", highlight: "Database Administration", description: "Manage and secure enterprise databases." },
         serviceSection: {
             badgeText: "🛠 DATABASE ADMINISTRATION",

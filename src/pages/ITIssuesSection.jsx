@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import itIssuesImg from "../assets/customer-service-man-at-work-1024x682.jpg"
-const ITIssuesSection = ({ itIssuesFeatures, heroTitle }) => {
+const ITIssuesSection = ({ itIssuesFeatures }) => {
   const navigate = useNavigate()
   return (
     <section className="itissues-section">
@@ -10,11 +10,11 @@ const ITIssuesSection = ({ itIssuesFeatures, heroTitle }) => {
 
       <Container className="itissues-content">
 
-        {/* <div className="badge3">WHO WE ARE</div> */}
+        <div className="badge3">Upgrade Your Skills</div>
 
         <h2 className="itissues-title">
 
-          <span>  Also Visit</span>
+          <span>  Explore Our Career-Focused Courses</span>
         </h2>
 
         <Row className="align-items-center mt-5 pt-5  justify-content-evenly">

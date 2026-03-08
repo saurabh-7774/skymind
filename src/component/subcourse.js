@@ -2,6 +2,10 @@ import caseImg from '../assets/customer-service-man-at-work.jpg'
 import ai from '../assets/maincourses/AI_Data_Science_&_Analytic.png'
 import cloud from '../assets/maincourses/Cloud_&_DevOps.png'
 import aiimg from '../assets/1_3.jpg'
+import fullstack from '../assets/maincourses/Full_Stack_Development.png'
+import mobile from '../assets/maincourses/Mobile_Development.png'
+import uiux from '../assets/maincourses/UI_UX_&_Creative_Design.png'
+import data from '../assets/maincourses/Database_&_Storage_Systems.png'
 export const courses = [
 
   // 1️⃣ AI, Data Science & Analytics
@@ -142,6 +146,8 @@ export const courses = [
   // 3️⃣ Full Stack Development
   {
     slug: "Full_Stack_Development",
+    image2: fullstack,
+
     heroTitle: "Full Stack Development",
     heroHighlight: "Modern Web Technologies",
     heroDescription:
@@ -293,6 +299,8 @@ export const courses = [
   // 4️⃣ Mobile Development
   {
     slug: "Mobile_Development",
+    image2: mobile,
+
     heroTitle: "Mobile Development",
     heroHighlight: "Android & iOS",
     heroDescription:
@@ -438,6 +446,8 @@ export const courses = [
   // 5️⃣ UI/UX & Creative Design
   {
     slug: "UI_UX_&_Creative_Design",
+    image2: uiux,
+
     heroTitle: "UI/UX & Creative Design",
     heroHighlight: "Design Thinking",
     heroDescription:
@@ -548,6 +558,8 @@ visually compelling interfaces across web and mobile platforms.
   // 6️⃣ Database & Storage Systems
   {
     slug: "Database_&_Storage_Systems",
+    image2: data,
+
     heroTitle: "Database & Storage Systems",
     heroHighlight: "SQL & NoSQL",
     heroDescription:

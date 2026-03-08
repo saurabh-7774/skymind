@@ -12,12 +12,18 @@ import FaqSection from '../component/FaqSection';
 import Footer from '../component/Footer';
 import CtaSection from '../component/CtaSection';
 import React from 'react'
+import ITIssuesSection from './ITIssuesSection';
+import { clientIssues } from '../component/course'
+
 
 const Home = () => {
+  
     return (
         <div>
             <HeroSection />
-            <SupportSection />
+                        <SupportSection />
+
+            <ITIssuesSection itIssuesFeatures={clientIssues} />
             <ToolsSection />
 
             <AboutSection />

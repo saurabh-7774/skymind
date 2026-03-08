@@ -19,7 +19,7 @@ const ServicesHero = ({ title, highlight, description, bgImage }) => {
 
       <Container className="hero-content px-2 px-lg-5">
         <Row className="align-items-center justify-content-evenly">
-          <Col lg={6} className="hero-left text-center text-lg-start">
+          <Col lg={4} className="hero-left text-center text-lg-start">
             <h1>
               {title} <span>{highlight}</span>
             </h1>
