@@ -950,7 +950,24 @@
   align-items: center;
   color: #fff;
   overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+/* Mobile */
+@media (max-width: 991px) {
+
+  .about-hero {
+    background-position: right center;
+    /* focus right side */
+    min-height: 50vh !important;
+    text-align: center;
+  }
+
+}
+
 
 /* Background Image */
 .about-hero::before {
@@ -993,6 +1010,13 @@
 
 /* Responsive */
 @media (max-width: 991px) {
+
+
+  .about-hero::before {
+    background-position: right center !important;
+
+  }
+
 
   .about-hero {
     min-height: 60vh;

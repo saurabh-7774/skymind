@@ -217,7 +217,7 @@
 }
 
 .badge3 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 
   margin-top: 10px;
   padding: 15px 30px;
@@ -1555,6 +1555,16 @@
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
+  .itcasestudy-right {
+    padding-left: 0px !important;
+  }
+
+  .step-item {
+    display: grid !important;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
   .service-content {
     position: relative;
     bottom: unset;

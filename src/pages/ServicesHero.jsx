@@ -10,9 +10,6 @@ const ServicesHero = ({ title, highlight, description, bgImage }) => {
       className="about-hero"
       style={{
         backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="overlay"></div>
