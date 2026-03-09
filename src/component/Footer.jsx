@@ -126,7 +126,7 @@ const Footer = () => {
                         <h5 className="footer-title mt-4">Working Hours</h5>
 
                         <p>
-                            Monday - Friday | 9:00 AM - 6:00 PM
+                            Monday - Saturday  | 9:00 AM - 8:00 PM
                         </p>
 
                     </Col>
@@ -152,7 +152,7 @@ const Footer = () => {
                         </span>
 
                         <span>
-                            <a href="https://www.instagram.com/skymind.it/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/skymind.it?igsh=MWl1eWh4YnpnMnkwMg==" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram />
                             </a>
                         </span>
@@ -164,7 +164,7 @@ const Footer = () => {
                         </span>
 
                         <span>
-                            <a href="https://www.google.com/maps?..." target="_blank" rel="noopener noreferrer">
+                            <a href="https://share.google/PL9U3fKDzB62aeGZN" target="_blank" rel="noopener noreferrer">
                                 <FaMapMarkerAlt />
                             </a>
                         </span>

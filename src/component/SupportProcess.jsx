@@ -27,9 +27,7 @@ const SupportProcess = () => {
                                 </h5>
 
                                 <p>
-                                    To become a globally trusted IT innovation partner known for
-                                    intelligent AI solutions, advanced cloud systems, and transformative
-                                    digital ecosystems.
+                                    To provide high-quality, affordable, and reliable IT services that simplify processes, enhance productivity, and create measurable value—through innovation, continuous learning, and a customer-first approach.
                                 </p>
 
                                 <h5 className="mt-4">
@@ -37,9 +35,7 @@ const SupportProcess = () => {
                                 </h5>
 
                                 <p>
-                                    To deliver innovative, scalable, and affordable technology solutions
-                                    while nurturing industry-ready professionals through practical,
-                                    real-world learning experiences.
+                                   To become a globally trusted IT innovation partner by delivering future-ready, intelligent, and scalable technology solutions that empower businesses to grow, transform, and lead in the digital era.
                                 </p>
 
 

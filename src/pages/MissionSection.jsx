@@ -46,8 +46,7 @@ const MissionSection = () => {
                                         <div>
                                             <h6>Our Mission</h6>
                                             <p>
-                                                To provide high-quality, affordable, and reliable
-                                                IT services that simplify processes and enhance productivity.
+                                            To become a globally trusted IT innovation partner by delivering future-ready, intelligent, and scalable technology solutions that empower businesses to grow, transform, and lead in the digital era.
                                             </p>
                                         </div>
                                     </div>
@@ -61,7 +60,7 @@ const MissionSection = () => {
                                         <div>
                                             <h6>Our VISION</h6>
                                             <p>
-                                                ach.
+                                                
                                                 Our vision is to become a globally trusted IT innovation partner
                                                 by delivering future-ready, intelligent, and scalable technology
                                                 solutions that empower businesses to grow, transform, and lead

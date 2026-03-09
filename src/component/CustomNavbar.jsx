@@ -81,7 +81,7 @@ const CustomNavbar = () => {
               </span>
 
               <span>
-                <a href="https://www.instagram.com/skymind.it/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/skymind.it?igsh=MWl1eWh4YnpnMnkwMg==" target="_blank" rel="noopener noreferrer">
                   <FaInstagram />
                 </a>
               </span>
@@ -93,7 +93,7 @@ const CustomNavbar = () => {
               </span>
 
               <span>
-                <a href="https://www.google.com/maps?sca_esv=0c0ded2c55dfde36&sxsrf=ANbL-n6TG_khw30nQUq_USjek_Z70bA0wQ:1772647894325&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiI3NreW1pbmQgaXQgc29sdXRpb25zIG5hc2hpayB5b3V0dWJlMggQIRigARjDBEinFlD3CFiUE3ACeACQAQCYAdoCoAH0DaoBBzAuNC4yLjK4AQPIAQD4AQGYAgagAsAFwgILEAAYiQUYogQYsAPCAgsQABiABBiiBBiwA8ICCBAAGO8FGLADwgIEECMYJ8ICCBAAGIkFGKIEwgIIEAAYgAQYogTCAgUQABjvBcICChAhGAoYoAEYwwSYAwCIBgGQBgWSBwUyLjMuMaAH4RuyBwUwLjMuMbgHtwXCBwUxLjIuM8gHDoAIAQ&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KTkBWkmR6907MUJkNQID13cA&daddr=4th+floor,+Shobana+Palza,+Shahid+Circle,+Gangapur+Rd,+above+Sai+Chinese+Corner,+Abhyuday+Colony,+S.T.+Colony,+Nashik,+Maharashtra+422013" target="_blank" rel="noopener noreferrer">
+                <a href="https://share.google/PL9U3fKDzB62aeGZN" target="_blank" rel="noopener noreferrer">
                   <FaMapMarkerAlt />
                 </a>
               </span>
